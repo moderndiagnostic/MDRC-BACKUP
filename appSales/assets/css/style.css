@@ -1,0 +1,251 @@
+:root {
+    --primary-color: #0297CC;
+    --body-color: #494949;
+}
+
+body {
+    position: relative;
+    font-size: 14px;
+    margin: 0;
+    color: #222;
+    background-color: #F5F5F5;
+}
+
+.main-wrap {
+    padding: 60px 15px 0px 15px;
+}
+
+.search-box {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.search-box .search {
+    position: absolute;
+    left: 15px;
+    font-size: 19px;
+    top: 50%;
+    cursor: pointer;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.search-box input {
+    font-size: 15px;
+    padding: 10px 40px;
+    border-radius: 4px;
+    color: #222;
+    border: 1px solid #d2d2d2;
+    ;
+    background-color: #ffffff;
+}
+
+.mb-xxl {
+    margin-bottom: 75px;
+}
+
+
+.text-main {
+    color: var(--primary-color);
+}
+
+.content-color {
+    color: var(--body-color);
+}
+
+.arrow-box i {
+    background-color: var(--primary-color);
+    height: 25px;
+    width: 25px;
+    line-height: 25px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.arrow-box:hover i {
+    background-color: #000;
+}
+
+.card-lists {
+    margin-bottom: 15px;
+}
+
+.arrow-box {
+    color: #fff;
+    text-decoration: none;
+}
+
+.team-list .card-body img {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+}
+
+.team-list .card-footer img {
+    height: 16px;
+    width: 16px;
+}
+
+.team-view .card-footer img {
+    height: 16px;
+    width: 16px;
+}
+
+.team-list .card-footer .col-6 {
+    padding: 13px;
+}
+
+.tx-12 {
+    font-size: 12px;
+}
+
+.tx-14 {
+    font-size: 14px;
+}
+
+.tx-16 {
+    font-size: 16px;
+}
+.tx-15 {
+    font-size: 15px;
+}
+
+
+.p-13 {
+    padding: 13px;
+}
+
+.avtar-md {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+}
+.avtar-sm{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.arrow-box-outline {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--primary-color);
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+}
+
+.call-box {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--primary-color);
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--primary-color);
+    color: #fff;
+    line-height: 30px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.call-box a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.call-box:hover{
+    background-color: transparent;
+    
+}
+
+.call-box:hover a{
+    color: var(--primary-color);
+}
+.arrow-box-outline:hover {
+    background-color: var(--primary-color);
+}
+
+.arrow-box-outline:hover i {
+    color: #ffffff;
+}
+
+.arrow-box-outline i {
+    font-size: 16px;
+    color: var(--primary-color);
+}
+
+.bottom-divider {
+    border-bottom: 5px solid #f1f1f1 !important;
+}
+
+.timeline-item {
+    position: relative;
+
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 17px;
+    width: 2px;
+    height: 100%;
+    background-color: var(--primary-color);
+    z-index: -1;
+}
+
+
+.card-anchor {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+.card-anchor:hover .card {
+    background-color: #fafafa !important;
+    box-shadow: 0 0px 1px rgba(0, 0, 0, 0.2);
+    /* Adds shadow effect on hover */
+    color: inherit;
+}
+
+.modal-close .btn-close {
+
+    background-color: #F7F7F7;
+    border-radius: 5px;
+    height: 30px;
+    opacity: 1;
+    padding: 0;
+    text-align: center;
+    width: 30px;
+    text-align: end;
+    position: absolute;
+    right: -7px;
+    top: -14px;
+}
+
+.line-clamp-1 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    height: 20px;
+}
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.text-decoration-none{
+    text-decoration: none !important;
+}

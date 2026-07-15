@@ -1,0 +1,71 @@
+<?php
+	class model_employee_sample_pickup_update{
+		public $fields= array();
+		public $nullable= array();
+		public $default_value= array();
+		public $ID= 0;
+		public $KEY= "";
+
+		function __construct($ID=0){
+			$this->ID = $ID;
+			$this->KEY = "id";
+			$this->fields["id"]="bigint(20)";
+			$this->nullable["id"]="NO";
+			$this->default_value["id"]="";
+			$this->fields["employee_id"]="bigint(20)";
+			$this->nullable["employee_id"]="NO";
+			$this->default_value["employee_id"]="";
+			$this->fields["client_id"]="bigint(20)";
+			$this->nullable["client_id"]="NO";
+			$this->default_value["client_id"]="";
+			$this->fields["employee_sample_pickup_id"]="int(11)";
+			$this->nullable["employee_sample_pickup_id"]="NO";
+			$this->default_value["employee_sample_pickup_id"]="";
+			$this->fields["pickup_date"]="datetime";
+			$this->nullable["pickup_date"]="NO";
+			$this->default_value["pickup_date"]="";
+			$this->fields["pickup_status"]="enum('Check In','Check Out','Payment','Start Journey','End Journey','Sample Collect')";
+			$this->nullable["pickup_status"]="NO";
+			$this->default_value["pickup_status"]="Check In";
+			$this->fields["collect_sample"]="enum('Yes','No')";
+			$this->nullable["collect_sample"]="NO";
+			$this->default_value["collect_sample"]="No";
+			$this->fields["collect_payment"]="enum('Yes','No')";
+			$this->nullable["collect_payment"]="NO";
+			$this->default_value["collect_payment"]="No";
+			$this->fields["collect_payment_amount"]="float(9,2)";
+			$this->nullable["collect_payment_amount"]="NO";
+			$this->default_value["collect_payment_amount"]="";
+			$this->fields["collect_payment_otp"]="varchar(20)";
+			$this->nullable["collect_payment_otp"]="NO";
+			$this->default_value["collect_payment_otp"]="";
+			$this->fields["collect_payment_otp_mobile"]="varchar(255)";
+			$this->nullable["collect_payment_otp_mobile"]="YES";
+			$this->default_value["collect_payment_otp_mobile"]="";
+			$this->fields["collect_payment_otp_verify"]="enum('Yes','No')";
+			$this->nullable["collect_payment_otp_verify"]="NO";
+			$this->default_value["collect_payment_otp_verify"]="No";
+			$this->fields["checkin_photo"]="varchar(255)";
+			$this->nullable["checkin_photo"]="NO";
+			$this->default_value["checkin_photo"]="";
+			$this->fields["latitude"]="varchar(100)";
+			$this->nullable["latitude"]="NO";
+			$this->default_value["latitude"]="";
+			$this->fields["longitude"]="varchar(100)";
+			$this->nullable["longitude"]="NO";
+			$this->default_value["longitude"]="";
+			$this->fields["google_address"]="text";
+			$this->nullable["google_address"]="NO";
+			$this->default_value["google_address"]="";
+			$this->fields["updated_at"]="timestamp";
+			$this->nullable["updated_at"]="NO";
+			$this->default_value["updated_at"]="current_timestamp()";
+			$this->fields["device_type"]="enum('Web','Android','IOS')";
+			$this->nullable["device_type"]="YES";
+			$this->default_value["device_type"]="Android";
+			$this->fields["ip"]="varchar(20)";
+			$this->nullable["ip"]="NO";
+			$this->default_value["ip"]="";
+		}
+	}
+?>

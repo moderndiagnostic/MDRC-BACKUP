@@ -1,0 +1,32 @@
+# Large user/media content (tens of GB)
+uploads/
+**/uploads/
+Uploads/
+**/Uploads/
+
+# Runtime / generated
+cache/
+**/cache/
+logs/
+**/logs/
+temp/
+**/temp/
+tmp/
+**/tmp/
+*.log
+
+# Archives / backups
+*.tar.gz
+*.zip
+*.rar
+*.sql
+*.sql.gz
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+.env.local
+.env.*.local

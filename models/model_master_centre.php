@@ -1,0 +1,71 @@
+<?php
+	class model_master_centre{
+		public $fields= array();
+		public $nullable= array();
+		public $default_value= array();
+		public $ID= 0;
+		public $KEY= "";
+
+		function __construct($ID=0){
+			$this->ID = $ID;
+			$this->KEY = "id";
+			$this->fields["id"]="bigint(20)";
+			$this->nullable["id"]="NO";
+			$this->default_value["id"]="";
+			$this->fields["employee_id"]="int(11)";
+			$this->nullable["employee_id"]="NO";
+			$this->default_value["employee_id"]="";
+			$this->fields["lms_center_id"]="int(11)";
+			$this->nullable["lms_center_id"]="NO";
+			$this->default_value["lms_center_id"]="";
+			$this->fields["name"]="varchar(255)";
+			$this->nullable["name"]="NO";
+			$this->default_value["name"]="";
+			$this->fields["center_type"]="varchar(255)";
+			$this->nullable["center_type"]="NO";
+			$this->default_value["center_type"]="";
+			$this->fields["address"]="text";
+			$this->nullable["address"]="NO";
+			$this->default_value["address"]="";
+			$this->fields["cityzone"]="varchar(255)";
+			$this->nullable["cityzone"]="NO";
+			$this->default_value["cityzone"]="";
+			$this->fields["area"]="varchar(255)";
+			$this->nullable["area"]="NO";
+			$this->default_value["area"]="";
+			$this->fields["mobile"]="varchar(255)";
+			$this->nullable["mobile"]="NO";
+			$this->default_value["mobile"]="";
+			$this->fields["contact_person"]="varchar(255)";
+			$this->nullable["contact_person"]="NO";
+			$this->default_value["contact_person"]="";
+			$this->fields["contact_mobile"]="varchar(255)";
+			$this->nullable["contact_mobile"]="NO";
+			$this->default_value["contact_mobile"]="";
+			$this->fields["payment_mode"]="varchar(255)";
+			$this->nullable["payment_mode"]="NO";
+			$this->default_value["payment_mode"]="";
+			$this->fields["sort_order"]="int(11)";
+			$this->nullable["sort_order"]="NO";
+			$this->default_value["sort_order"]="";
+			$this->fields["status"]="enum('Active','Inactive','Trash')";
+			$this->nullable["status"]="NO";
+			$this->default_value["status"]="Active";
+			$this->fields["city_id"]="int(11)";
+			$this->nullable["city_id"]="NO";
+			$this->default_value["city_id"]="";
+			$this->fields["state_id"]="int(11)";
+			$this->nullable["state_id"]="NO";
+			$this->default_value["state_id"]="";
+			$this->fields["master_businesszone_id"]="int(11)";
+			$this->nullable["master_businesszone_id"]="NO";
+			$this->default_value["master_businesszone_id"]="";
+			$this->fields["created_at"]="timestamp";
+			$this->nullable["created_at"]="NO";
+			$this->default_value["created_at"]="current_timestamp()";
+			$this->fields["updated_at"]="timestamp";
+			$this->nullable["updated_at"]="NO";
+			$this->default_value["updated_at"]="0000-00-00 00:00:00";
+		}
+	}
+?>
