@@ -795,7 +795,7 @@
 						$this->metaDescription = $meta_description;
 					}
 					if($this->metaSchema==NULL){
-						$meta_schema = str_replace($default_string, $new_string,$rs[0]["meta_schema"]);
+						$meta_schema = str_replace($default_string, array(strtolower($_SESSION['cityName'])),$rs[0]["meta_schema"]);
 						$this->metaSchema = $meta_schema;
 					}
 				}else{

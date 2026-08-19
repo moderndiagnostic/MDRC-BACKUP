@@ -14,7 +14,7 @@ input.error,select.error,textarea.error
 <?php }?>
 
 <script src="js/jquery.validate.min.js"></script>
-<script src="js/generalscript.js?v=2.04"></script>
+<script src="js/generalscript.js?v=2.06"></script>
 
 <?php if($this->getCurrentView()=="radiology" || $this->getCurrentView()=="pathology" || $this->getCurrentView()=="search" || $this->getCurrentView()=="search" || $this->getCurrentView()=="diseases" || $this->getCurrentView()=="category" || $this->getCurrentView()=="premium_health_checkup"){?>
 

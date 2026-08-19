@@ -1,4 +1,9 @@
 RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} .+/$
+RewriteRule ^(.+)/$ /$1 [R=301,L]
+
 ErrorDocument 404 https://www.mdrcindia.com/404
 ErrorDocument 403 /index.php?view=404
 
@@ -110,6 +115,8 @@ RewriteRule my-prescription index.php?view=my_prescription
 RewriteRule my-profile index.php?view=my_profile
 RewriteRule my-wallet index.php?view=my_wallet
 RewriteRule our-doctors$ index.php?view=our_doctors
+
+RewriteRule ^our-doctors/detail/([^/]*)$ index.php?view=doctor_details&doctor_slug=$1 [L,QSA]
 
 RewriteRule ^download-reports index.php?view=download_reports
 

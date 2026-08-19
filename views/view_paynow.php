@@ -72,10 +72,15 @@
 <!--End Breadcrumb Area-->
 
 <div class="d-none">
-<form method="post" name="redirect" id="redirect" action="<?=CCA_URL?>">
-<input type="hidden" name="encRequest" id="encRequest" />
-<input type="hidden" name="access_code" id="access_code" />
-</form>
+	<!-- <form method="post" name="redirect" id="redirect" action="<?=CCA_URL?>">
+		<input type="hidden" name="encRequest" id="encRequest" />
+		<input type="hidden" name="access_code" id="access_code" />
+	</form> -->
+	<form name='razorpayform' action="paynow-payment-process" id="redirect" method="POST">
+		<input type="hidden" name="razorpay_payment_id" id="razorpay_payment_id">
+		<input type="hidden" name="razorpay_signature" id="razorpay_signature">
+		<input type="hidden" name="razorpay_order_id" id="razorpay_order_id">
+	</form>
 </div>
 
 <!--Start Footer -->
@@ -92,4 +97,5 @@
 <!--common script file-->
 <script src="js/main.js"></script>
 <script src='https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/js/bootstrap-select.min.js'></script>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 <?php include 'includes/general_data.php'; ?>

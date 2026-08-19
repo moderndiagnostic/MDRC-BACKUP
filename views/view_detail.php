@@ -47,7 +47,7 @@
             <div class="row">
                <div class="col-lg-12">
                   <h1 class="fs-2"><?= $this->rs_data['name'] ?> in <?= $this->city_name ?></h1>
-                  <p class="subhead"><span>Includes: <strong><?= $this->rs_data['test_count'] ?> tests</strong></span></p>
+                  <p class="subhead"><span>Includes: <strong><?= $this->rs_data['test_count'] ?> Parameters</strong></span></p>
                   <?php if (count($this->rs_package_data) > 0) {
                      $pName = array();
                      for ($i = 0; $i < count($this->rs_package_data); $i++) {

@@ -17,8 +17,6 @@ class _payment_process extends controller{
 		$razorpay_signature=$this->app->getPostVar('razorpay_signature');
 		$razorpay_order_id=$this->app->getPostVar('razorpay_order_id');
 		$encResponse=$this->app->getPostVar('encResp');
-		$encResponse=$this->app->getPostVar('encResp');
-		$encResponse=$this->app->getPostVar('encResp');
 
 		if(!empty($encResponse))
 		{

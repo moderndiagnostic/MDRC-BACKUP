@@ -30,7 +30,7 @@ $obj_model_direct_payment_order = $app->load_model("direct_payment_order");
 $obj_model_direct_payment_order->map_fields($update_direct_payment_order);
 $diretPaymentOrderID=$obj_model_direct_payment_order->execute("INSERT");			
 
-if($diretPaymentOrderID!='')
+/* if($diretPaymentOrderID!='')
 {
     include('../../ccavenue/Crypto.php');
 
@@ -77,6 +77,66 @@ if($diretPaymentOrderID!='')
     $paymentGateway=[];
     $paymentGateway["encRequest"] = $encrypted_data;
     $paymentGateway["access_code"] = $access_code;
+    
+    $RESULT='OK';
+    $MSG='Please Enter Correct Data.';
+    echo $obj_json->encode(["RESULT"=>$RESULT,"MSG"=>$MSG,"paymentGateway"=>$paymentGateway]);
+    exit;
+}
+else
+{
+    $RESULT='NOT OK';
+    $MSG='Please Enter Correct Data.';
+    echo $obj_json->encode(["RESULT"=>$RESULT,"MSG"=>$MSG]);
+    exit;
+} */
+
+if($diretPaymentOrderID!='')
+{
+    include('../../razorpay-php/Razorpay.php');
+
+    $pay_value=(int)$pay_amount;
+    $amount = number_format($pay_value, '2', '.', '');
+    $orderData = [
+        'receipt'         => 'D'.$diretPaymentOrderID,
+        'amount'          => $amount * 100,
+        'currency'        => 'INR',
+        'payment_capture' => 1 // auto capture
+    ];
+    $url = "https://api.razorpay.com/v1/orders";
+    $razor_order_id = $app->utility->razorpay_create_order($orderData, $url);
+
+    $payment_data['razor_order_id']=$razor_order_id;
+    $obj_model_payment_data=$app->load_model("direct_payment_order");
+    $obj_model_payment_data->map_fields($payment_data);
+    $obj_model_payment_data->execute("UPDATE",false,"","id='".$diretPaymentOrderID."'");
+
+    $keyId = RAZOR_PAY_KEY;
+    $keySecret = RAZOR_PAY_SECRET;
+
+    $json = [
+        "key"               => $keyId,
+        "amount"            => $amount,
+        "name"              => "Modern Diagnostic & Research Centre",
+        "description"       => "Online Shopping Site",
+        "image"             => "https://www.mdrcindia.com/images/logo.webp",
+        "prefill"           => [
+            "name"              => $pay_name,
+            "email"             => $pay_email,
+            "contact"           => $pay_phone,
+        ],
+        "notes"             => [
+            "address"           => '',
+        ],
+        "theme"             => [
+            "color"             => "#F37254"
+        ],
+        "order_id"          => $razor_order_id,
+    ];
+   
+    $paymentGateway=[];
+    $paymentGateway["json"] = $json;
+    $paymentGateway["razor_order_id"] = $razor_order_id;
     
     $RESULT='OK';
     $MSG='Please Enter Correct Data.';

@@ -110,7 +110,7 @@
 
             <div class="col-lg-3 col-sm-6 mb30 ">
 
-                <div class="full-image-card pb-4 borderhover up-hor">
+                <div class="full-image-card pb-4 borderhover up-hor">	
 
                     <div class="image-div shadow-none"><img src="<?=$image?>" alt="<?=$this->rs_doctor[$i]['name']?>" class="img-fluid"/></div>
 
@@ -121,6 +121,22 @@
                         <span><?=$this->rs_doctor[$i]['doctor_category_name']?></span>
 
                     </div>
+                          
+                           <a href="our-doctors/detail/<?=$this->rs_doctor[$i]['slug']?>" style="
+       display:inline-block;
+       margin-top:12px;
+       padding:8px 20px;
+       background:linear-gradient(135deg,#1b6ca8,#0d8b8b);
+       color:#fff;
+       font-size:14px;
+       font-weight:600;
+       font-family:'Poppins',sans-serif;
+       text-decoration:none;
+       border-radius:25px;
+       letter-spacing:.2px;
+       box-shadow:0 4px 12px rgba(0,0,0,.15);
+       transition:all .3s ease;
+   ">Know More<i class="fas fa-arrow-right" style="margin-left:6px;font-size:12px;"></i></a>
 
                 </div>
 
@@ -134,9 +150,7 @@
 
             
 
-            
-
-            
+                    
 
             
 

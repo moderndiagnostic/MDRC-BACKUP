@@ -599,18 +599,8 @@ if (VIR_DIR == 'm/') {
 									<li class="nav-item"><a href="premium-health-checkup/<?= $_SESSION['citySlug']; ?>" class="nav-link head-menu">Full Body Checkup</a></li>
 
 									<li class="nav-item dropdown">
-										<a href="for-doctors/super-specialised-services" class="nav-link dropdown-toggle-cust head-menu">Superspecialised Lab Tests</a>
-										<ul class="dropdown-menu main-menu" aria-labelledby="navbarDropdown">
-											
-											<?php for ($i=0; $i < count($this->records_services_h); $i++) { ?>
-											<li class="nav-item dropdown">
-												<div class="d-flex">
-													<a href="service/super-specialised-services/<?= $this->records_services_h[$i]['slug'] ?>" class="nav-link ps-3 pe-2"><?= $this->records_services_h[$i]['title'] ?></a>
-												</div>
-											</li>
-											<?php }?>
-											
-										</ul>
+										<a href="https://genomics.mdrcindia.com/" class="nav-link  head-menu jkl"><strong style="color:khaki">Genomic Services</strong></a>
+										
 									</li>
 									
 									<li class="nav-item dropdown">

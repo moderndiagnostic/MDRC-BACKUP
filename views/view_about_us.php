@@ -130,7 +130,7 @@
 
 							<div class="statnumb text-center text-lg-start text-md-start">
 
-								<span class="counter">40</span><span>+</span>
+								<span class="counter">41</span><span>+</span>
 
 								<p>Years Of Experience</p>
 
@@ -162,7 +162,7 @@
 
 							<div class="statnumb text-center text-lg-start text-md-start">
 
-								<span class="counter">20</span>
+								<span class="counter">25</span>
 
 								<p>Labs in India</p>
 
@@ -377,7 +377,7 @@
 
 									<h6 class="mt0 text-202024 mb10">NABH Accredited Imaging Centre</h6>
 
-									<p class="text-202024">MDRC Diagnostic centre at Sector 44, Gurugram and our Reference Lab at New Railway Road, Gurugram are NABH accredited.</p>
+									<p class="text-202024">MDRC Diagnostic centre at Sector 40, Gurugram and our Reference Lab at New Railway Road, Gurugram are NABH accredited.</p>
 
 									<!-- <p class="text-202024">The CAP Accreditation Program is an internationally recognized program that helps laboratories achieve the highest standards of excellence to positively impact patient care. The goal of the CAP Laboratory Accreditation Program is to improve patient safety and patient care by advancing the quality of pathology and laboratory services through medical education and laboratory standardization.</p> -->
 
@@ -425,7 +425,7 @@
 					<img src="images/img-lab.png" />
 
 					<h4>
-					20+ Labs across 8 States<br/><span>Uttar Pradesh, Haryana, Rajasthan, West Bengal, Assam, Jammu & Kashmir, Madhya Pradesh</span>
+					25+ Labs across 8 States<br/><span>Uttar Pradesh, Haryana, Rajasthan, West Bengal, Assam, Jammu & Kashmir, Madhya Pradesh</span>
 
 				</div>
 
@@ -449,7 +449,7 @@
 
 					<img src="images/img-collection.png" />
 
-					<h4>2100+ Touch points across India<br/><span>MDRC offers complete range of diagnostic facilities in Radiology & Pathology under one roof.</span>
+					<h4>2000+ Touch points across India<br/><span>MDRC offers complete range of diagnostic facilities in Radiology & Pathology under one roof.</span>
 
 				</div>
 
@@ -754,7 +754,24 @@
 
 				                        <p><?=$rs_doctor[$j]['designation']?></p>
                                         
-                                        <?=$rs_doctor[$j]['about_info']?>
+                                         <a href="our-doctors/detail/<?=$rs_doctor[$j]['slug']?>"
+   style="
+       display:inline-block;
+       margin-top:12px;
+       padding:8px 20px;
+       background:linear-gradient(135deg,#1b6ca8,#0d8b8b);
+       color:#fff;
+       font-size:14px;
+       font-weight:600;
+       font-family:'Poppins',sans-serif;
+       text-decoration:none;
+       border-radius:25px;
+       letter-spacing:.2px;
+       box-shadow:0 4px 12px rgba(0,0,0,.15);
+       transition:all .3s ease;
+   ">
+   Know More <i class="fas fa-arrow-right" style="margin-left:6px;font-size:12px;"></i>
+</a>
 
 										
 

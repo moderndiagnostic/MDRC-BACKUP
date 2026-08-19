@@ -21,6 +21,9 @@
 			$this->fields["mobile"]="varchar(255)";
 			$this->nullable["mobile"]="NO";
 			$this->default_value["mobile"]="";
+			$this->fields["razor_order_id"]="varchar(255)";
+			$this->nullable["razor_order_id"]="NO";
+			$this->default_value["razor_order_id"]="";
 			$this->fields["amount"]="int(11)";
 			$this->nullable["amount"]="NO";
 			$this->default_value["amount"]="";

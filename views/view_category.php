@@ -79,16 +79,23 @@
 		<div class="row align-items-end section-title">
 			<div class="col-lg-12 col-md-12 col-12">
 				<div class="text-start ">
-
-
 					<?php if ($this->rs_cat[0]['decsription'] != '') {
 						$default_string = array("{CITY}");
 						$new_string   = array($_SESSION['cityName']);
 						$desc = str_replace($default_string, $new_string, $this->rs_cat[0]['decsription']);
 					?>
-						<div class="com-tag"><?= $desc; ?></div>
+						<!-- <div class="com-tag"><?= $desc; ?></div> -->
+						<div class="description">
+							<div id="shortDescription">
+								<?php echo substr($desc, 0, 1000); ?>...
+								<a href="javascript:void(0);" onclick="showMore()">Read More</a>
+							</div>
+							<div id="fullDescription" style="display:none;">
+								<?php echo $desc; ?>
+								<a href="javascript:void(0);" onclick="showLess()">Read Less</a>
+							</div>
+						</div>
 					<?php } ?>
-
 				</div>
 			</div>
 		</div>
@@ -194,7 +201,17 @@
 						$new_string   = array($_SESSION['cityName']);
 						$desc = str_replace($default_string, $new_string, $this->rs_cat[0]['decsription']);
 					?>
-						<div class="com-tag"><?= $desc; ?></div>
+						<!-- <div class="com-tag"><?= $desc; ?></div> -->
+						<div class="description">
+							<div id="shortDescription">
+								<?php echo substr($desc, 0, 1000); ?>...
+								<a href="javascript:void(0);" onclick="showMore()">Read More</a>
+							</div>
+							<div id="fullDescription" style="display:none;">
+								<?php echo $desc; ?>
+								<a href="javascript:void(0);" onclick="showLess()">Read Less</a>
+							</div>
+						</div>
 					<?php } ?>
 
 				</div>
@@ -460,3 +477,17 @@
 <script src="js/main.js"></script>
 <script src='https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/js/bootstrap-select.min.js'></script>
 <?php include 'includes/general_data.php'; ?>
+
+<script>
+
+function showMore() {
+    document.getElementById("shortDescription").style.display = "none";
+    document.getElementById("fullDescription").style.display = "block";
+}
+
+function showLess() {
+    document.getElementById("shortDescription").style.display = "block";
+    document.getElementById("fullDescription").style.display = "none";
+}
+
+</script>

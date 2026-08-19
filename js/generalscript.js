@@ -1419,9 +1419,32 @@ $(document).ready(function ()
 						$("#direct_pay_order_btn").removeAttr('disabled','disabled');
 						if(data.RESULT=="OK")
 						{
-							$('#encRequest').val(data.paymentGateway.encRequest);
-							$('#access_code').val(data.paymentGateway.access_code);
-							$("#redirect").submit();
+							//$('#encRequest').val(data.paymentGateway.encRequest);
+							//$('#access_code').val(data.paymentGateway.access_code);
+							//$("#redirect").submit();
+
+							var options = data.paymentGateway.json;
+
+							options.handler = function(response) {
+								document.getElementById('razorpay_payment_id').value = response.razorpay_payment_id;
+								document.getElementById('razorpay_signature').value = response.razorpay_signature;
+								document.getElementById('razorpay_order_id').value = response.razorpay_order_id;
+								document.razorpayform.submit();
+							};
+							options.theme.image_padding = false;
+							options.modal = {
+								ondismiss: function() {
+									console.log("This code runs when the popup is closed");
+								},
+								escape: true,
+								backdropclose: false
+							};
+							var rzp = new Razorpay(options);
+							rzp.open();
+							// document.getElementById('rzp-button1').onclick = function(e) {
+							// 	rzp.open();
+							// 	e.preventDefault();
+							// }
 						} 
 						else
 						{

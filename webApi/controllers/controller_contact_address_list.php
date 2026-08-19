@@ -70,6 +70,7 @@ class _contact_address_list extends controller {
 		}
 		
 		$opt=json_encode($message, JSON_UNESCAPED_UNICODE);
+	
 		echo $this->app->utility->indent($opt);
 		exit;
 	}

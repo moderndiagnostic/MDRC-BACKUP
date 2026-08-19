@@ -6026,7 +6026,7 @@ class utility extends Singleton
 		if ($mrp > 0 && $mrp > $price) {
 			$dis = $mrp - $price;
 			$dis_per = (int)((100 * $dis) / $mrp);
-			$html .= '<span class="percnt">Get ' . $dis_per . ' % OFF</span>';
+			$html .= '<span class="percnt"> ' . $dis_per . ' % OFF</span>';
 		}
 		$html .= '</h5>';
 		return $html;
