@@ -118,7 +118,18 @@
 
                         <h4><?=$this->rs_doctor[$i]['name']?></h4>
 
-                        <span><?=$this->rs_doctor[$i]['doctor_category_name']?></span>
+                        <span style="
+    display: block;
+    margin-top: 6px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #555;
+    line-height: 1.5;
+    letter-spacing: 0.2px;
+">
+    <?=$this->rs_doctor[$i]['designation']?>
+</span>
 
                     </div>
                           
